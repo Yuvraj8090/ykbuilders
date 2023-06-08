@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="newproject.css">
+    <script src="newproject.js"></script>
+    <title>Appartment</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/fontawesome.min.css"
+        integrity="sha512-SgaqKKxJDQ/tAUAAXzvxZz33rmn7leYDYfBP+YoMRSENhf3zJyx3SBASt/OfeQwBHA1nxMis7mM3EV/oYT6Fdw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="nav flex">
+        <div class="logo-box">
+            <h2>Appartment</h2>
+
+
+        </div>
+        <div class="menu" id="menus">
+            <ul class="flex">
+                <li><a href="newproject.html" class="ho">Home</a></li>
+                <li>About</li>
+                <li class="ap">apartment <div class="bhk">
+                        <a href="1BHK.HTML">1 BHK</a>
+                        <a href="#">2 BHK</a>
+                        <a href="#">3 BHK</a>
+                        <a href="#">4 BHK</a>
+                    </div>
+                </li>
+                <li>Agent</li>
+                <li>Contact us</li>
+            </ul>
+        </div>
+        <div class="btn-box flex">
+            <li>Join Us</li>
+            <li class="yellow">Get Started</li>
+        </div>
+        <span class="toggle-btn" onclick="toggle()">&#9776</span>
+    </div>
+    <div class="Loan-two-section flex inner">
+        <div class="left">
+            <h1><span>Apply Home Loan </span> <br>
+                Online at Apartment</h1>
+            <div class="left">
+                <h6><span class="fa fa-check facility"></span>Loan Offers from 34+ Banks</h6>
+                <h6><span class="fa fa-check facility"></span>Highest Loan Value & Lowest ROI</h6>
+                <h6><span class="fa fa-check facility"></span>Dedicated RM for Property Search</h6>
+                <h6><span class="fa fa-check facility"></span>Fastest Loan Disbursal</h6>
+            </div>
+        </div>
+        <form>
+
+
+            <div class="home-loan__main-form__input-box">
+                <div class="home-loan__revamp-change__label"><span
+                        class="home-loan__revamp-change__label--bold">1178<span class="plus">+</span>
+                        users</span>checked eligibility in last 24 hours </div>
+                <div class="home-loan__main-form__input-box--title"></div>
+                <div class="yk-form__row" id="monthlyIncomeBox"><label class="yk-form__label" id="ent">Enter Monthly
+                        Income</label>
+                    <div class="yk-form__prefix">
+                        <div class="yk-form__prefix__pre">&#8377;</div><input type="text" class="yk-form__input"
+                            id="monthlyIncome" onkeyup="() => onKeyUpHandler()" maxlength="13" minlength="6"
+                            autocomplete="off">
+                    </div>
+                    
+                </div>
+                <div class="yk-form__row" id="mobileNumberBox"><label class="yk-form__label">Mobile
+                        Number</label>
+                    <div class="yk-form__prefix has-mobile">
+                        <div class="yk-form__prefix__pre"><span class="plus__font">+</span>91</div><input type="text"
+                            class="yk-form__input" id="mobileNumber" onkeyup="() => onKeyUpHandler()" maxlength="10"
+                            minlength="10" autocomplete="off">
+                    </div>
+                    <div class="yk-form__error" id="mobileNumberMessage"></div>
+                </div><a href='/homeloan/verify-otp' class="yk-form__button primary" id="generate-otp"
+                    onclick="applyLoan.events.linkClickHandler();pushGAHLFormMsite('home_loan_funnel',false,'home loan - funnel','home loan homepage','cta clicked - new funnel start','','cta clicked - funnel start','','Check Eligibility');">Check
+                    Eligibility </a>
+                
+            </div>
+        </form>
+
+    </div>
+    <script src="newproject.js"></script>
+</body>
+<script type="text/javascript">
+    document.getElementById("monthlyIncomeBox").onclick = function () {
+    document.getElementById("ent").style.top = "0";
+
+};
+// position: relative;
+//     color: #6f6b6b;
+    
+//     top: 67px;
+//     left: 35px;
+//     text-decoration: underline;
+</script>
+</html>

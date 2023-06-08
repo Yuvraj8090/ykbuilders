@@ -1,0 +1,646 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
+@import url('https://fontawesome.com/icons/boxes-packing?f=classic&s=solid');
+
+li:hover {
+    background-color: #000000;
+    color: #fff;
+}
+img {
+    --s: 15px;  /* size of the frame */
+    --b: 2px;   /* border thickness */
+    --w: 200px; /* width of the image */
+    --c: #090808;
+    
+    width: var(--w);
+    aspect-ratio: 1;
+    object-fit: cover;
+    padding: calc(0.9*var(--s));
+    --_g: var(--c) var(--b),#0000 0 calc(100% - var(--b)),var(--c) 0;
+    background:
+      linear-gradient(      var(--_g)) 50%/100% var(--_i,100%) no-repeat,
+      linear-gradient(90deg,var(--_g)) 50%/var(--_i,100%) 100% no-repeat;
+    outline: calc(var(--w)/1.2) solid #0009;
+    outline-offset: calc(var(--w)/-1 - 1*var(--s));
+    transition: .4s;
+    cursor: pointer;
+  }
+  img:hover {
+    outline: var(--b) solid var(--c);
+    outline-offset: calc(var(--s)/-2);
+    --_i: calc(100% - 2*var(--s));
+
+        transform: scale(0.9, 0.9);
+        z-index: 999;
+    
+  }
+  
+
+.images:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+li:hover .ho {
+    background-color: #000000;
+    color: #fff;
+}
+
+li:hover .bhk {
+    display: block;
+
+}
+
+html {
+    font-size: 16px;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+a {
+    text-decoration: none;
+    color: #000000;
+}
+
+.inner {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 1%;
+}
+
+.bhk {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+
+}
+
+.bhk a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.bhk a:hover {
+    background-color: #030303;
+    color: #fff;
+}
+
+.ap:hover .bhk {
+    display: block;
+}
+
+#up {
+    display: none;
+}
+
+.ap:hover #up {
+    display: block;
+}
+
+.ap:hover #down {
+    display: none;
+}
+
+.nav {
+    max-width: 1400px;
+    margin: 0 auto;
+    align-items: center;
+    padding: 30px 20px 20px 30px;
+
+}
+
+ul {
+    align-items: center;
+}
+
+ul li {
+    list-style: none;
+
+    text-transform: capitalize;
+}
+
+.menu {
+    width: 50%;
+}
+
+.toggle-btn {
+    font-size: 1.5rem;
+    display: none;
+}
+
+.btn-box {
+    width: 18%;
+    align-items: center;
+}
+
+.btn-box li {
+    list-style: none;
+    text-transform: capitalize;
+
+}
+
+.yellow {
+    background-color: rgb(56, 54, 54);
+    padding: 8px 17px;
+    border-radius: 3px;
+    color: #fff;
+}
+
+/* two section  */
+.two-section .left {
+    width: 60%;
+    height: 30vh;
+    position: absolute;
+    z-index: 999;
+    top: 23vh;
+
+}
+
+.two-section .left h1 {
+    font-size: 58px;
+    font-weight: 700;
+}
+
+.search {
+    margin-top: 40px;
+    width: 500px;
+    position: absolute;
+}
+
+.search input {
+    width: 75%;
+    border: 0;
+    background-color: #fff;
+    padding: 25px 40px;
+    font-size: 15px;
+}
+
+.search-btn {
+    width: 25%;
+    border: 0;
+    background-color: rgb(0, 0, 0);
+    color: #ffffff;
+    padding: 25px 10px;
+    font-size: 15px;
+    font-weight: 700;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+
+}
+
+.lux-shadow {
+    box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.1);
+}
+
+.hero-image {
+    width: 88%;
+    height: 78vh;
+    background-image: url(HD-free-apartment-wallpaper.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    right: -17%;
+}
+
+.hero-image-info {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background-color: #000000;
+    align-items: center;
+    padding: 20px;
+}
+
+.hero-image-info p {
+    font-weight: 700;
+    font-size: 18px;
+    padding: 10px 20px;
+    color: white;
+
+}
+
+.info {
+    margin: 5px 35px;
+    align-items: center;
+}
+
+.info-icon {
+    color: #fff;
+    font-size: 1.8rem;
+}
+
+/* company info  */
+.company {
+    padding: 100px 10px;
+}
+
+.company .left {
+    width: 50%;
+}
+
+.company .left h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    line-height: 50px;
+    padding-bottom: 50px;
+
+}
+
+.company .left p {
+    line-height: 35pz;
+
+}
+
+.company .right .box {
+    width: 47%;
+    background-color: #f6f5f4;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 15px 0;
+}
+
+.right .box h1 {
+    color: rgb(63, 200, 18);
+}
+
+.right .box h3 {
+    text-transform: capitalize;
+    font-weight: 500;
+    font-size: 1.1rem;
+    margin-top: 10px;
+
+}
+
+/* apartments */
+.apartments {
+    width: 100%;
+    background-color: #f6f5f4;
+    padding: 75px 10px;
+}
+
+.text {
+    width: 100%;
+}
+
+.text h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    line-height: 50px;
+    padding-bottom: 50px;
+}
+
+.images {
+    width: 30%;
+    margin: 20px 0;
+    background-color: #fff;
+    padding-bottom: 25px;
+
+}
+
+.images img {
+    width: 100%;
+}
+
+.details {
+    padding: 0 20px;
+
+}
+
+.details h4 {
+    text-transform: capitalize;
+    font-weight: 600;
+    font-size: 1rem;
+    margin: 15px 0;
+
+}
+
+.price {
+    align-items: center;
+    padding: 5px 0;
+
+}
+
+.p-left h3 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: rgb(63, 200, 18);
+
+}
+
+.facility {
+    font-size: 0.9rem;
+    color: #1f373d;
+    margin: 0px 10px;
+}
+
+.p-right h4 {
+    display: inline;
+    font-size: 0.9rem;
+    margin-left: 10px;
+}
+
+/* search area  */
+.search-part {
+    width: 100%;
+    padding: 50px 0;
+    justify-content: flex-start;
+}
+
+.search-box {
+    width: 40%;
+    background-color: #fff;
+    margin-right: 50px;
+    align-items: center;
+
+}
+
+.search-box h4 {
+    text-transform: capitalize;
+    font-weight: 500;
+    color: #000000;
+
+}
+
+.sar {
+    margin-left: 10px;
+
+}
+
+.sar-btn {
+    color: #fff;
+    background-color: #000000;
+    outline: none;
+    border: none;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 0px 30px;
+    height: 100%;
+
+}
+
+.view {
+    padding: 20px 60px;
+    background-color: #fff;
+    text-transform: capitalize;
+}
+
+.view h4 {
+    font-weight: 500;
+}
+
+/* loan available */
+.Loan-two-section {
+    background-color: rgb(119, 119, 119);
+}
+
+.Loan-two-section h1 span {
+    font-size: 48px;
+    font-weight: 700;
+    color: rgb(255, 255, 255);
+}
+
+.left h6 {
+    position: relative;
+    padding: 10px;
+    color: rgb(255, 255, 255);
+}
+
+.Loan-two-section form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 10px;
+    background-color: #ffffff;
+    width: 40%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.Loan-two-section form input {
+    margin: 20px;
+    
+    width: 100%;
+    border: 0;
+    background-color: #fff;
+    padding: 10px;
+    font-size: 15px;
+
+}
+#monthlyIncomeBox #ent{
+    position: relative;
+    color: #6f6b6b;
+    
+    top: 67px;
+    left: 35px;
+    text-decoration: underline;
+
+}
+
+
+/* media queries starts */
+@media only screen and (max-width:1500px) {
+    .hero-image {
+        right: -13%;
+    }
+
+    .btn-box li {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width:100px) {
+
+    .company .left,
+    .company .right {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .company .right .box {
+        height: 300px;
+
+    }
+
+    .menu {
+        width: 100%;
+        margin-top: 20px;
+        display: none;
+    }
+
+    .btn-box {
+        display: none;
+    }
+
+    .toggle-btn {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+
+    }
+
+    .nav {
+        padding: 20px;
+    }
+}
+
+@media only screen and (max-width:768px) {
+    .hero-image-info {
+        width: 100%;
+    }
+
+    .hero-image {
+        width: 100%;
+        position: unset;
+    }
+
+    .two-section {
+        padding: unset;
+    }
+
+    .two-section .left {
+        width: 805;
+    }
+
+    .images {
+        width: 70%;
+        margin: 30px auto;
+        text-align: center;
+    }
+
+    .apartments .text {
+        text-align: center;
+    }
+
+    .search-box {
+        height: 50px;
+        width: 80%;
+        margin: 20px auto;
+    }
+
+    .view {
+        margin: 0 auto;
+    }
+
+    .two-section .left {
+        width: 100%;
+    }
+
+    .two-section .left h1 {
+        font-size: 3rem;
+    }
+
+    .btn-box {
+        display: none;
+    }
+
+    .price {
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width:500px) {
+    .search {
+        width: 95%;
+        margin: 0 auto;
+        position: unset;
+        padding-top: 20px;
+    }
+
+    .search input {
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+    }
+
+    .two-section .left h1 {
+        text-align: center;
+    }
+
+    ul {
+
+        flex-direction: column;
+    }
+
+    ul li {
+        text-align: center;
+        margin: 15px 0;
+    }
+
+    .menu {
+        background-color: #ffcc01;
+        z-index: 1000;
+    }
+
+    .company .left h1 {
+        text-align: center;
+        margin-top: 50px;
+    }
+
+    .price {
+        justify-content: center;
+    }
+
+    .company .left p {
+        text-align: justify;
+    }
+
+    .images {
+        width: 80%;
+        text-align: center;
+    }
+
+    .p-left h3 {
+        padding-bottom: 20px;
+
+    }
+
+    .info {
+        width: 100%;
+        justify-content: flex-start;
+        margin: 5px 0;
+    }
+
+    .company .right .box {
+        width: 80%;
+        margin: 30px auto;
+    }
+
+    .search-box {
+        width: 100%;
+    }
+
+    .sar-btn {
+        padding: 0 10px;
+    }
+
+    .details h4 {
+        line-height: 25px;
+    }
+}
