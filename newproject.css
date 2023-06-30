@@ -212,14 +212,13 @@ ul li {
 }
 
 .hero-image {
-    width: 88%;
-    height: 78vh;
-    background-image: url(HD-free-apartment-wallpaper.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+  
+
+  
+   
     position: relative;
-    right: -17%;
+    left: 30%;
+    width: auto;
 }
 
 .hero-image-info {
@@ -230,7 +229,32 @@ ul li {
     align-items: center;
     padding: 20px;
 }
-
+.button {
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    
+  }
+  .button1{
+    background-color: white; 
+    color: black; 
+    border: 2px solid #008CBA;
+  }
+  .button1:hover {
+    background-color: #008CBA;
+    color: white;
+  }
+  
 .hero-image-info p {
     font-weight: 700;
     font-size: 18px;
@@ -461,9 +485,10 @@ ul li {
     top: 67px;
     left: 35px;
     text-decoration: underline;
+    animation-duration: 4s;
 
 }
-
+/* code editing */
 
 /* media queries starts */
 @media only screen and (max-width:1500px) {
@@ -476,7 +501,7 @@ ul li {
     }
 }
 
-@media only screen and (max-width:100px) {
+@media only screen and (max-width:1000px) {
 
     .company .left,
     .company .right {
@@ -492,7 +517,7 @@ ul li {
     .menu {
         width: 100%;
         margin-top: 20px;
-        display: none;
+    position: relative;
     }
 
     .btn-box {
@@ -504,6 +529,10 @@ ul li {
         right: 15px;
         top: 15px;
 
+    }
+    .two-section{
+    height: 100%;
+    width: 100%;
     }
 
     .nav {
@@ -643,4 +672,9 @@ ul li {
     .details h4 {
         line-height: 25px;
     }
+}
+a{
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
 }
